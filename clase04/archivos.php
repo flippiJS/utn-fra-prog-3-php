@@ -2,7 +2,7 @@
 
 // Definimos en que carpeta vamos a guardar los archivos
 // La carpeta debe estar creada
-$carpetaArchivos = 'subida/';
+$carpeta_archivos = 'subida/';
 
 // Datos del arhivo enviado por POST
 $nombre_archivo = $_FILES['archivo']['name'];
@@ -10,7 +10,7 @@ $tipo_archivo = $_FILES['archivo']['type'];
 $tamano_archivo = $_FILES['archivo']['size'];
 
 // Ruta destino, carpeta + nombre del archivo que quiero guardar
-$ruta_destino = $carpetaArchivos . $nombre_archivo;
+$ruta_destino = $carpeta_archivos . $nombre_archivo;
 
 // Realizamos las validaciones del archivo
 if (!((strpos($tipo_archivo, "png") || strpos($tipo_archivo, "jpeg")) && ($tamano_archivo < 100000))) {

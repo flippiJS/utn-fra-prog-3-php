@@ -15,7 +15,11 @@ switch($_SERVER['REQUEST_METHOD']){
         }
         break;
     case 'POST':
-        echo 'POST';
+        switch ($_GET['accion']){
+            case 'archivo':
+                include 'archivos.php';
+                break;
+        }
         break;
     default:
         echo 'Verbo no permitido';

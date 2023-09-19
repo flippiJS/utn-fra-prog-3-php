@@ -12,12 +12,18 @@ switch($_SERVER['REQUEST_METHOD']){
             case 'json':
                 include 'json.php';
                 break;
+            default:
+                echo 'Parámetro "accion" no permitido';
+                break;
         }
         break;
     case 'POST':
         switch ($_GET['accion']){
             case 'archivo':
                 include 'archivos.php';
+                break;
+            default:
+                echo 'Parámetro "accion" no permitido';
                 break;
         }
         break;

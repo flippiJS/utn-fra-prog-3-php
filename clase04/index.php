@@ -9,6 +9,9 @@ switch($_SERVER['REQUEST_METHOD']){
             case 'cookies':
                 include 'cookies.php';
                 break;
+            case 'json':
+                include 'json.php';
+                break;
         }
         break;
     case 'POST':

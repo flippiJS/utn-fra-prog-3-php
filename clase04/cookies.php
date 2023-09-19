@@ -1,7 +1,9 @@
 <?php
+    // Ejemplo Cookies
 
     if( isset( $_COOKIE['prueba']) )
     {
+        // Verificammos que esta creada la cookie "prueba"
         echo "<p>La cookie está creada</p>";
     }
     else

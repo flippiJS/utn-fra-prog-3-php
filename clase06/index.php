@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo json_encode(['error' => 'Falta el parametro action']);
     }
 } elseif ($_SERVER['REQUEST_METHOD'] === 'PUT') {
-    $putData = json_decode(file_get_contents("php://input"), true);
+    parse_str(file_get_contents("php://input"), $putData);
 
     if (isset($_GET['action'])) {
         switch ($_GET['action']) {

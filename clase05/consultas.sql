@@ -1,12 +1,15 @@
 /* INSERT */
 
-/* Insertamos un nuevo registro en la tabla usuarios */
-INSERT INTO usuarios (nombre, apellido, fecha_nacimiento) VALUES ('Juan', 'Gomez', '1972-02-22');
+/* Insertamos un nuevo registro en la tabla usuarios - FORMATO YYYY-MM-DD - NOW() - CURRENT_DATE() */
+INSERT INTO usuarios (nombre, apellido, fecha_nacimiento) 
+VALUES ('Juan', 'Gomez', '1972-02-22');
 
 /* UPDATE */
 
 /* Actualizamos todos los registros de la tabla usuarios donde apellido sea 'Diaz'*/
-UPDATE usuarios SET nombre = 'Jorgecito', apellido = 'Diaaz', fecha_nacimiento = '1969-07-11' WHERE apellido = 'Diaz';
+UPDATE usuarios 
+SET nombre = 'Jorgecito', apellido = 'Diaaz', fecha_nacimiento = '1969-07-11'
+WHERE apellido = 'Diaz';
 
 /* DELETE */
 

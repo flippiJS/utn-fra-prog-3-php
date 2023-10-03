@@ -7,6 +7,7 @@ if(isset($_SESSION["usuario"])){
 } else {
     // Guardar datos de sesión
     $_SESSION["usuario"] = "Franco";
+    echo 'NO estaba seteado, lo seteamos';
 }
 
 ?>

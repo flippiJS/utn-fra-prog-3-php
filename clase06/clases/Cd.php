@@ -1,4 +1,7 @@
 <?php
+
+include '../db/AccesoDatos.php';
+
 class Cd
 {
     public $id;

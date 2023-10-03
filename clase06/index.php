@@ -28,11 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['action'])) {
         switch ($_GET['action']) {
             case 'insertar':
-                if (isset($postData['titulo']) && isset($postData['cantante']) && isset($postData['anio'])) {
-                    $resultado = $cdController->insertarCd($postData['titulo'], $postData['cantante'], $postData['anio']);
+                if (isset($_POST['titulo']) && isset($_POST['cantante']) && isset($_POST['anio'])) {
+                    $resultado = $cdController->insertarCd($_POST['titulo'], $_POST['cantante'], $_POST['anio']);
                     echo json_encode(['resultado' => $resultado]);
                 } else {
-                    echo json_encode(['error' => 'Faltan parametros']);
+                    echo json_encode(['error' => 'Faltan parámetros']);
                 }
                 break;
             default:

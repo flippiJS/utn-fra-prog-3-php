@@ -1,5 +1,5 @@
 <?php
-require_once 'controllers/CdController.php';
+require_once 'clases/CdController.php';
 
 $cdController = new CdController();
 

@@ -32,7 +32,11 @@ class CdController {
     }
 
     public function buscarCdPorId($id) {
-        return cd::TraerUnCd($id);
+        $retorno = cd::TraerUnCd($id);
+        if($retorno === false) { // Validamos que exista y si no mostramos un error
+            $retorno =  ['error' => 'No existe ese id'];
+        }
+        return $retorno;
     }
 
     public function buscarCdPorIdYAnio($id, $anio) {

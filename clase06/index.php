@@ -23,8 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo json_encode(['error' => 'Falta el parametro action']);
     }
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $postData = json_decode(file_get_contents("php://input"), true);
-
     if (isset($_GET['action'])) {
         switch ($_GET['action']) {
             case 'insertar':
@@ -63,12 +61,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo json_encode(['error' => 'Falta el parametro action']);
     }
 } elseif ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
-    $deleteData = $_GET;
-    if (isset($deleteData['action'])) {
-        switch ($deleteData['action']) {
+
+    if (isset($_GET['action'])) {
+        switch ($_GET['action']) {
             case 'borrar':
-                if (isset($deleteData['id'])) {
-                    $resultado = $cdController->borrarCd($deleteData['id']);
+                if (isset($_GET['id'])) {
+                    $resultado = $cdController->borrarCd($_GET['id']);
                     echo json_encode(['resultado' => $resultado]);
                 } else {
                     echo json_encode(['error' => 'Falta el parametro id']);

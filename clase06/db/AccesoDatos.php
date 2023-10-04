@@ -1,4 +1,5 @@
 <?php
+
 class AccesoDatos
 {
     private static $ObjetoAccesoDatos;
@@ -20,6 +21,7 @@ class AccesoDatos
     { 
         return $this->objetoPDO->prepare($sql); 
     }
+
      public function RetornarUltimoIdInsertado()
     { 
         return $this->objetoPDO->lastInsertId(); 

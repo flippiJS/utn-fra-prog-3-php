@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "0d59ff3f-e4e4-4b0c-883d-4c4a58511ab3",
+		"name": "Clase06",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29666735"
+	},
+	"item": [
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/clase06/index.php?action=listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"clase06",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "listar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/clase06/index.php?action=buscarPorId&id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"clase06",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "buscarPorId"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "titulo",
+							"value": "Nevermind",
+							"type": "text"
+						},
+						{
+							"key": "cantante",
+							"value": "Nirvana",
+							"type": "text"
+						},
+						{
+							"key": "anio",
+							"value": "1991",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/clase06/index.php?action=insertar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"clase06",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "insertar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar CD",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "titulo",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "cantante",
+							"value": "Nirvana",
+							"type": "text"
+						},
+						{
+							"key": "anio",
+							"value": "1990",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/clase06/index.php?action=modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"clase06",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "modificar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar CD",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/clase06/index.php?action=borrar&id=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"clase06",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "borrar"
+						},
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
